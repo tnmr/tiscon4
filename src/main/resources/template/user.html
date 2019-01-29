@@ -45,10 +45,18 @@
                                 <td>
                                     <p>例：ＴＩＳ　太郎</p>
                                     <div class="field" th:classappend="${errors.hasError('kanjiName')} ? 'error'">
-                                        <input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
-                                        <p th:if="${errors.hasError('kanjiName')}"
+                                        <div style ="display:inline-flex">
+                                          <p>姓</p>
+                                        　<input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
+                                        　<p th:if="${errors.hasError('kanjiName')}"
                                            th:text="${errors.getMessage('kanjiName')}" class="error-message">
-                                        </p>
+                                        　</p>
+                                          <p>名</p>
+                                        　<input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
+                                        　<p th:if="${errors.hasError('kanjiName')}"
+                                           th:text="${errors.getMessage('kanjiName')}" class="error-message">
+                                        　</p>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -60,10 +68,18 @@
                                 <td>
                                     <p>例：ティーアイエス　タロウ</p>
                                     <div class="field" th:classappend="${errors.hasError('kanaName')} ? 'error'">
-                                        <input type="text" name="kanaName" th:value="${form.kanaName}"/>
-                                        <p th:if="${errors.hasError('kanaName')}"
+                                        <div style ="display:inline-flex">
+                                          <p>姓</p>
+                                          <p th:if="${errors.hasError('kanaName')}"
                                            th:text="${errors.getMessage('kanaName')}" class="error-message">
-                                        </p>
+                                          </p>
+                                          <p>名</p>
+                                          <input type="text" name="kanaName" th:value="${form.kanaName}"/>
+                                          <p th:if="${errors.hasError('kanaName')}"
+                                           th:text="${errors.getMessage('kanaName')}" class="error-message">
+                                          </p>
+                                          <input type="text" name="kanaName" th:value="${form.kanaName}"/>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -75,10 +91,18 @@
                                 <td>
                                     <p>例：TIS TAROU</p>
                                     <div class="field" th:classappend="${errors.hasError('alphabetName')} ? 'error'">
-                                        <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
-                                        <p th:if="${errors.hasError('alphabetName')}"
+                                        <div style ="display:inline-flex">
+                                          <p>姓</p>
+                                          <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
+                                          <p th:if="${errors.hasError('alphabetName')}"
                                            th:text="${errors.getMessage('alphabetName')}" class="error-message">
-                                        </p>
+                                          </p>
+                                          <p>名</p>
+                                          <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
+                                          <p th:if="${errors.hasError('alphabetName')}"
+                                           th:text="${errors.getMessage('alphabetName')}" class="error-message">
+                                          </p>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
