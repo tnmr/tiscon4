@@ -10,8 +10,8 @@
 
     <script type="text/javascript">
         function Check(){
-            if(!document.getElementsByName("acceptance").checked){
-                alert("チェックが入っていません。");
+            if(!document.getElementsByName("acceptance")[0].checked){
+                alert("チェックが入っていません。ご加入条件を確認して、チェックを入れて下さい。");
             }
         }
     </script>
@@ -23,6 +23,7 @@
 <div class="full height image">
     <div class="ui main container">
         <div class="ui information container">
+            <div><a href="/">TOP</a> > 条件確認</div>
             <div class="acceptance-icon" style="border:solid 3px #4B610B;" th:if="${insOrder.insuranceType.equals('treat')}">
                 <img src="/img/icon_treat.png">
             </div>
@@ -68,7 +69,7 @@
                             <label>全ての加入条件を満たしていることを確認しました。</label>
                         </div>
 
-                        <button class="ui fluid teal button" onclick="Check()">次へ（個人情報の入力）</button>
+                        <button class="ui fluid teal button" onclick="Check();">次へ（個人情報の入力）</button>
                     </form>
                 </div>
             </div>

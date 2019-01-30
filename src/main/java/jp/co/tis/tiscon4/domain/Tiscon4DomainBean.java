@@ -25,17 +25,17 @@ public class Tiscon4DomainBean {
     private String insuranceType;
 
     /** 漢字氏名 */
-    @SystemChar(charsetDef = "全角文字", message = "{domain.illegalCharacter}")
+    @SystemChar(charsetDef = "全角文字", message = "{tiscon4.order.inputUser.error.zennkaku}")
     @Length(max = 60)
     private String kanjiName;
 
     /** カナ氏名 */
-    @SystemChar(charsetDef = "全角カタカナスペース", message = "{domain.illegalCharacter}")
+    @SystemChar(charsetDef = "全角カタカナスペース", message = "{tiscon4.order.inputUser.error.katakana}")
     @Length(max = 90)
     private String kanaName;
 
     /** 英字氏名 */
-    @SystemChar(charsetDef = "半角英字スペース", message = "{domain.illegalCharacter}")
+    @SystemChar(charsetDef = "半角英字スペース", message = "{tiscon4.order.inputUser.error.roman}")
     @Length(max = 120)
     private String alphabetName;
 
