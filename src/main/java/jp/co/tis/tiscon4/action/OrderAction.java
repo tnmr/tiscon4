@@ -91,7 +91,10 @@ public class OrderAction {
             Message message = ValidationUtil.createMessageForProperty("gender", "tiscon4.order.inputUser.error.gender");
             throw new ApplicationException(message);
         }
-
+       /* if (!(form.getGender().equals("male")||form.getGender().equals("female"))) {
+            Message message = ValidationUtil.createMessageForProperty("gender", "tiscon4.order.inputUser.error.select");
+            throw new ApplicationException(message);
+        }*/
         UniversalDao.findAllBySqlFile(ZipcodeDto.class, "ZIPCODE_LIST");
 
         BeanUtil.copy(form, insOrder);
