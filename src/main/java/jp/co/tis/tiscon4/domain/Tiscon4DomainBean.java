@@ -40,6 +40,7 @@ public class Tiscon4DomainBean {
     private String alphabetName;
 
     /** 性別 */
+    @SystemChar()
     @CodeValue(enumClass = GenderType.class)
     private String gender;
 
@@ -52,7 +53,7 @@ public class Tiscon4DomainBean {
     private String zipCode;
 
     /** 住所 */
-    @SystemChar(charsetDef = "全角文字", message = "{domain.illegalCharacter}")
+    @SystemChar(charsetDef = "全角文字", message = "{tiscon4.order.inputUser.error.zennkaku}")
     @Length(max = 255)
     private String address;
 
@@ -82,7 +83,7 @@ public class Tiscon4DomainBean {
     private String job;
 
     /** その他の職業 */
-    @SystemChar(charsetDef = "全角文字", message = "{domain.illegalCharacter}")
+    @SystemChar(charsetDef = "全角文字", message = "{tiscon4.order.inputUser.error.zennkaku}")
     @Length(max = 120)
     private String otherJob;
 
@@ -91,12 +92,12 @@ public class Tiscon4DomainBean {
     private String treated;
 
     /** 既往歴 */
-    @SystemChar(charsetDef = "全角文字", message = "{domain.illegalCharacter}")
+    @SystemChar(charsetDef = "全角文字", message = "{tiscon4.order.inputUser.error.zennkaku}")
     @Length(max = 255)
     private String medicalHistory;
 
     /** 勤務先 */
-    @SystemChar(charsetDef = "全角文字", message = "{domain.illegalCharacter}")
+    @SystemChar(charsetDef = "全角文字", message = "{tiscon4.order.inputUser.error.zennkaku}")
     @Length(max = 255)
     private String employerName;
 
@@ -105,7 +106,7 @@ public class Tiscon4DomainBean {
     private String employerZipCode;
 
     /** 勤務先住所 */
-    @SystemChar(charsetDef = "全角文字", message = "{domain.illegalCharacter}")
+    @SystemChar(charsetDef = "全角文字", message = "{tiscon4.order.inputUser.error.zennkaku}")
     @Length(max = 255)
     private String employerAddress;
 
