@@ -29,7 +29,7 @@ public class UserForm implements Serializable {
     private String alphabetName;
 
     /** 性別 */
-    @Required
+    @Required(message = "{tiscon4.order.inputUser.error.select}")
     @Domain("gender")
     private String gender;
 
@@ -64,7 +64,7 @@ public class UserForm implements Serializable {
     private String emailAddress;
 
     /** 配偶者有無 */
-    @Required
+    @Required(message = "{tiscon4.order.inputUser.error.select}")
     @Domain("married")
     private String married;
 
@@ -74,7 +74,7 @@ public class UserForm implements Serializable {
     private String income;
 
     /** 職業 */
-    @Required
+    @Required(message = "{tiscon4.order.inputUser.error.select}")
     @Domain("job")
     private String job;
 
@@ -83,7 +83,7 @@ public class UserForm implements Serializable {
     private String otherJob;
 
     /** 治療歴有無 */
-    @Required
+    @Required(message = "{tiscon4.order.inputUser.error.select}")
     @Domain("treated")
     private String treated;
 
