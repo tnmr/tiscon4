@@ -15,22 +15,21 @@ public class UserForm implements Serializable {
 
     /** 漢字氏名 */
     @Required
-    @Domain("kanjiName1")
+    @Domain("kanjiName")
     private String kanjiName1;
-
-    @Required
-    @Domain("kanjiName2")
     private String kanjiName2;
 
     /** カナ氏名 */
     @Required
     @Domain("kanaName")
-    private String kanaName;
+    private String kanaName1;
+    private String kanaName2;
 
     /** 英字氏名 */
     @Required
     @Domain("alphabetName")
-    private String alphabetName;
+    private String alphabetName1;
+    private String alphabetName2;
 
     /** 性別 */
     @Required(message = "{tiscon4.order.inputUser.error.select}")
@@ -95,133 +94,97 @@ public class UserForm implements Serializable {
     @Domain("medicalHistory")
     private String medicalHistory;
 
-    public String getKanjiName() {
-        return kanjiName;
+    public String getKanjiName1() {
+        return kanjiName1;
+    }
+    public String getKanjiName2() {
+        return kanjiName2;
     }
 
-    public void setKanjiName(String kanjiName) {
-        this.kanjiName = kanjiName;
+    public void setKanjiName1(String kanjiName1) { this.kanjiName1 = kanjiName1; }
+    public void setKanjiName2(String kanjiName2) {
+        this.kanjiName2 = kanjiName2;
     }
 
-    public String getKanaName() {
-        return kanaName;
+    public String getKanaName1() {
+        return kanaName1;
+    }
+    public String getKanaName2() {
+        return kanaName2;
     }
 
-    public void setKanaName(String kanaName) {
-        this.kanaName = kanaName;
+    public void setKanaName1(String kanaName1) {
+        this.kanaName1 = kanaName1;
+    }
+    public void setKanaName2(String kanaName2) {
+        this.kanaName2 = kanaName2;
     }
 
-    public String getAlphabetName() {
-        return alphabetName;
+    public String getAlphabetName1() {
+        return alphabetName1;
+    }
+    public String getAlphabetName2() {
+        return alphabetName2;
     }
 
-    public void setAlphabetName(String alphabetName) {
-        this.alphabetName = alphabetName;
+    public void setAlphabetName1(String alphabetName1) {
+        this.alphabetName1 = alphabetName1;
+    }
+    public void setAlphabetName2(String alphabetName2) {
+        this.alphabetName2 = alphabetName2;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
+    public String getdateOfBirth() {return dateOfBirth;}
 
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
+    public void setdateOfBirth(String dateOfBirth) { this.dateOfBirth = dateOfBirth; }
 
-    public String getGender() {
-        return gender;
-    }
+    public String getGender() { return gender; }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
+    public void setGender(String gender) { this.gender = gender; }
 
-    public String getZipCode() {
-        return zipCode;
-    }
+    public String getZipCode() { return zipCode; }
 
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
-    }
+    public void setZipCode(String zipCode) { this.zipCode = zipCode; }
 
-    public String getAddress() {
-        return address;
-    }
+    public String getAddress() { return address; }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+    public void setAddress(String address) { this.address = address; }
 
-    public String getHomePhoneNumber() {
-        return homePhoneNumber;
-    }
+    public String getHomePhoneNumber() { return homePhoneNumber; }
 
-    public void setHomePhoneNumber(String homePhoneNumber) {
-        this.homePhoneNumber = homePhoneNumber;
-    }
+    public void setHomePhoneNumber(String homePhoneNumber) { this.homePhoneNumber = homePhoneNumber; }
 
-    public String getMobilePhoneNumber() {
-        return mobilePhoneNumber;
-    }
+    public String getMobilePhoneNumber() { return mobilePhoneNumber; }
 
-    public void setMobilePhoneNumber(String mobilePhoneNumber) {
-        this.mobilePhoneNumber = mobilePhoneNumber;
-    }
+    public void setMobilePhoneNumber(String mobilePhoneNumber) { this.mobilePhoneNumber = mobilePhoneNumber; }
 
-    public String getEmailAddress() {
-        return emailAddress;
-    }
+    public String getEmailAddress() { return emailAddress; }
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
-    }
+    public void setEmailAddress(String emailAddress) { this.emailAddress = emailAddress; }
 
-    public String getMarried() {
-        return married;
-    }
+    public String getMarried() { return married; }
 
-    public void setMarried(String married) {
-        this.married = married;
-    }
+    public void setMarried(String married) { this.married = married; }
 
-    public String getJob() {
-        return job;
-    }
+    public String getJob() { return job; }
 
-    public void setJob(String job) {
-        this.job = job;
-    }
+    public void setJob(String job) { this.job = job; }
 
-    public String getIncome() {
-        return income;
-    }
+    public String getIncome() { return income; }
 
-    public void setIncome(String income) {
-        this.income = income;
-    }
+    public void setIncome(String income) { this.income = income; }
 
-    public String getOtherJob() {
-        return otherJob;
-    }
+    public String getOtherJob() { return otherJob; }
 
-    public void setOtherJob(String otherJob) {
-        this.otherJob = otherJob;
-    }
+    public void setOtherJob(String otherJob) { this.otherJob = otherJob; }
 
-    public String getTreated() {
-        return treated;
-    }
+    public String getTreated() { return treated; }
 
-    public void setTreated(String treated) {
-        this.treated = treated;
-    }
+    public void setTreated(String treated) { this.treated = treated; }
 
-    public String getMedicalHistory() {
-        return medicalHistory;
-    }
+    public String getMedicalHistory() { return medicalHistory; }
 
-    public void setMedicalHistory(String medicalHistory) {
-        this.medicalHistory = medicalHistory;
-    }
+    public void setMedicalHistory(String medicalHistory) { this.medicalHistory = medicalHistory; }
 
     /**
      * その他の職業欄が正しく入力されているかどうか判定する。
