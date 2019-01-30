@@ -10,8 +10,8 @@
 
     <script type="text/javascript">
         function Check(){
-            if(!document.getElementsByName("acceptance").checked){
-                alert("チェックが入っていません。");
+            if(!document.getElementsByName("acceptance")[0].checked){
+                alert("チェックが入っていません。ご加入条件を確認して、チェックを入れて下さい。");
             }
         }
     </script>
@@ -68,7 +68,7 @@
                             <label>全ての加入条件を満たしていることを確認しました。</label>
                         </div>
 
-                        <button class="ui fluid teal button" onclick="Check()">次へ（個人情報の入力）</button>
+                        <button class="ui fluid teal button" onclick="Check();">次へ（個人情報の入力）</button>
                     </form>
                 </div>
             </div>
