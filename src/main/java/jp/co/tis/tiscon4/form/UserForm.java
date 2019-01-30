@@ -15,8 +15,12 @@ public class UserForm implements Serializable {
 
     /** 漢字氏名 */
     @Required
-    @Domain("kanjiName")
-    private String kanjiName;
+    @Domain("kanjiName1")
+    private String kanjiName1;
+
+    @Required
+    @Domain("kanjiName2")
+    private String kanjiName2;
 
     /** カナ氏名 */
     @Required

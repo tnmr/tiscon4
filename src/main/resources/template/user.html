@@ -189,10 +189,22 @@
                                 <td>
                                     <p>例：00-1111-2222</p>
                                     <div class="field" th:classappend="${errors.hasError('homePhoneNumber')} ? 'error'">
-                                        <input type="text" name="homePhoneNumber" th:value="${form.homePhoneNumber}"/>
-                                        <p th:if="${errors.hasError('homePhoneNumber')}"
-                                           th:text="${errors.getMessage('homePhoneNumber')}" class="error-message">
+                                        <div style="display:inline-flex">
+                                        <input type="text" name="homePhoneNumber1" th:value="${form.homePhoneNumber}"/>
+                                        <p th:if="${errors.hasError('homePhoneNumber1')}"
+                                           th:text="${errors.getMessage('homePhoneNumber1')}" class="error-message">
                                         </p>
+                                        <p>-</p>
+                                        <input type="text" name="homePhoneNumber2" th:value="${form.homePhoneNumber}"/>
+                                        <p th:if="${errors.hasError('homePhoneNumber2')}"
+                                           th:text="${errors.getMessage('homePhoneNumber2')}" class="error-message">
+                                        </p>
+                                        <p>-</p>
+                                        <input type="text" name="homePhoneNumber3" th:value="${form.homePhoneNumber}"/>
+                                        <p th:if="${errors.hasError('homePhoneNumber3')}"
+                                           th:text="${errors.getMessage('homePhoneNumber3')}" class="error-message">
+                                        </p>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -203,10 +215,22 @@
                                 </td>
                                 <td>
                                     <p>例：080-0000-0000</p>
-                                    <div class="field"
-                                         th:classappend="${errors.hasError('mobilePhoneNumber')} ? 'error'">
+                                    <div class="field" th:classappend="${errors.hasError('mobilePhoneNumber')} ? 'error'">
+                                        <div style="display:inline-flex">
                                         <input type="text" name="mobilePhoneNumber"
                                                th:value="${form.mobilePhoneNumber}"/>
+                                        <p th:if="${errors.hasError('mobilePhoneNumber')}"
+                                           th:text="${errors.getMessage('mobilePhoneNumber')}" class="error-message">
+                                        </p>
+                                        <p>-</p>
+                                        <input type="text" name="mobilePhoneNumber"
+                                           th:value="${form.mobilePhoneNumber}"/>
+                                        <p th:if="${errors.hasError('mobilePhoneNumber')}"
+                                           th:text="${errors.getMessage('mobilePhoneNumber')}" class="error-message">
+                                        </p>
+                                        <p>-</p>
+                                        <input type="text" name="mobilePhoneNumber"
+                                           th:value="${form.mobilePhoneNumber}"/>
                                         <p th:if="${errors.hasError('mobilePhoneNumber')}"
                                            th:text="${errors.getMessage('mobilePhoneNumber')}" class="error-message">
                                         </p>
